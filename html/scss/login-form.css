@@ -1,0 +1,30 @@
+.login-modal input {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  padding: 3px 5px;
+}
+.login-modal input[type=submit] {
+  height: 40px;
+  width: 130px;
+}
+.login-modal__title {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.login-modal__form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #f8f5f2;
+  width: 400px;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*# sourceMappingURL=login-form.css.map */
