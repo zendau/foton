@@ -6,9 +6,9 @@ const app = express()
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
 
-const mongoose = require('mongoose')
+const mysql = require("./libs/mysql")
 
-const postRoute = require("./routes/post.route")
+const catalogRoute = require("./routes/catalog.route")
 
 const errorMiddleware = require("./middlewares/error.middleware")
 
@@ -25,18 +25,13 @@ app.use(cors({
 }))
 
 
-app.use("/post", postRoute)
+app.use("/catalog", catalogRoute)
 
 app.use(errorMiddleware)
 
 async function start() {
     try {
-        await mongoose.connect(process.env.DB_URL, {
-            useNewUrlParser: true,
-            useCreateIndex: true,
-            useUnifiedTopology: true,
-        }).then(() => console.log("Connected to MongoDB server"))
-            .catch((error) => console.log(error));
+        await mysql.start()
 
         app.listen(PORT, () => {
             console.log(`server started on http://localhost:${PORT}`)

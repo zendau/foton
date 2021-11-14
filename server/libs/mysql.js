@@ -1,16 +1,6 @@
 const mysql = require('mysql')
 
 class MySql {
-    constructor() {
-        this.connection = mysql.createConnection({
-            host: 'localhost',
-            user: 'root',
-            password: '',
-            database: 'node_js'
-        })
-        this.connection.connect()
-
-    }
 
     query(query) {
         return new Promise((resolve, reject) => {
@@ -23,6 +13,19 @@ class MySql {
 
     destroy() {
         this.connection.end()
+    }
+
+    start(){
+        this.connection = mysql.createConnection({
+            host: 'localhost',
+            user: 'root',
+            password: 'root',
+            database: 'foton'
+        })
+
+        this.connection.connect()
+
+        console.log("Connected to MySQL server")
     }
 }
 
