@@ -49,5 +49,9 @@ export default {
   },
   env: {
     server: process.env.SERVER_URL
-  }
+  },
+
+  serverMiddleware: [
+    { path: "/api", handler: "~/../server/index.js" },
+  ],
 }

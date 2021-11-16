@@ -16,7 +16,7 @@ export default {
   async asyncData({ params, $axios  }) {
 
 
-    const item = await $axios.$get(`http://localhost:8080/catalog/get/${params.id}`)
+    const item = await $axios.$get(`api/catalog/get/${params.id}`)
 
     console.log(item)
 

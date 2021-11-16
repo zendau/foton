@@ -26,7 +26,7 @@ export default {
   methods: {
     sendMail() {
 
-      this.$axios.$post('http://localhost:8080/email/sendEmail', {
+      this.$axios.$post('api//email/sendEmail', {
         text: this.subject,
         author: this.email
       })

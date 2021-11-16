@@ -11,7 +11,7 @@ export default {
   name: "catalog",
   layout: "main",
   async mounted() {
-    this.items = await this.$axios.$get('http://localhost:8080/catalog/getAllItems')
+    this.items = await this.$axios.$get('api/catalog/getAllItems')
   },
   data() {
     return {

@@ -29,6 +29,8 @@ app.use("/email", emailRoute)
 
 app.use(errorMiddleware)
 
+module.exports = app
+
 async function start() {
     try {
 
@@ -41,4 +43,4 @@ async function start() {
     }
 }
 
-start()
+//start()
