@@ -3,11 +3,18 @@ const mysql = require('mysql')
 class MySql {
 
     constructor() {
+        // this.connection = mysql.createPool({
+        //     host: 'localhost',
+        //     user: 'root',
+        //     password: '',
+        //     database: 'foton',
+        //     connectionLimit : 10,
+        // })
         this.connection = mysql.createPool({
-            host: 'localhost',
-            user: 'root',
-            password: '',
-            database: 'foton',
+            host: 'eu-cdbr-west-01.cleardb.com',
+            user: 'b2fa16f6302aab',
+            password: '9e64257f',
+            database: 'heroku_bbfb51578901d0f',
             connectionLimit : 10,
         })
         console.log("Connected to MySQL server")
