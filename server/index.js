@@ -10,6 +10,7 @@ const mysql = require("./libs/mysql")
 
 const catalogRoute = require("./routes/catalog.route")
 const emailRoute = require("./routes/email.route")
+const adminRoute = require("./routes/admin.route")
 
 const errorMiddleware = require("./middlewares/error.middleware")
 
@@ -28,6 +29,7 @@ app.use(cors({
 
 app.use("/catalog", catalogRoute)
 app.use("/email", emailRoute)
+app.use("/admin", adminRoute)
 
 app.use(errorMiddleware)
 
