@@ -33,7 +33,6 @@ app.use(errorMiddleware)
 
 async function start() {
     try {
-        await mysql.start()
 
         app.listen(PORT, () => {
             console.log(`server started on http://localhost:${PORT}`)

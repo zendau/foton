@@ -1,4 +1,5 @@
 const CatalogService = require("../services/catalog.service")
+const catalogDTO = require("../dtos/catalog")
 
 class CatalogController {
 
@@ -26,7 +27,8 @@ class CatalogController {
     async getAllItems(req, res, next) {
         try {
             const data = await CatalogService.getAllItems()
-            res.json(data)
+            const postsDto = data.map(item => new catalogDTO(item))
+            res.json(postsDto)
         } catch (e) {
             next(e)
         }

@@ -3,12 +3,16 @@ const mysql = require('mysql')
 class MySql {
 
     query(query) {
+        this.start()
+
         return new Promise((resolve, reject) => {
             this.connection.query(query,(err, rows, fields) => {
                 if (err) reject(err)
                 resolve(JSON.parse(JSON.stringify(rows)))
             })
         })
+
+        this.destroy()
     }
 
     destroy() {
