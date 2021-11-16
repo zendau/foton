@@ -1,0 +1,32 @@
+<template>
+  <div class="catalog__item">
+    <h3 class="catalog__title">{{ title }}</h3>
+    <img src="img/item.jpg" alt="Товар №1" class="catalog__img">
+    <NuxtLink class="btn catalog_btn" :to="`/item/${id}`">Открыть</NuxtLink>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "catalogItem",
+  props: ["title", "id"]
+}
+</script>
+
+<style lang="scss">
+  .catalog__item {
+    border: 1px solid #d3dcea;
+    border-radius: 6px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+
+    &:hover {
+      box-shadow: 0px 0px 10px 0px rgba(34, 60, 80, 0.2);
+    }
+
+  }
+</style>
