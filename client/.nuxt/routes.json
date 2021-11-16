@@ -1,0 +1,58 @@
+[
+  {
+    "name": "admin",
+    "path": "/admin",
+    "component": "D:\\\\projects\\\\foton\\\\client\\\\pages\\\\admin\\\\index.vue",
+    "chunkName": "pages/admin/index",
+    "_name": "_7da498d0"
+  },
+  {
+    "name": "catalog",
+    "path": "/catalog",
+    "component": "D:\\\\projects\\\\foton\\\\client\\\\pages\\\\catalog.vue",
+    "chunkName": "pages/catalog",
+    "_name": "_0099a87c"
+  },
+  {
+    "name": "feedback",
+    "path": "/feedback",
+    "component": "D:\\\\projects\\\\foton\\\\client\\\\pages\\\\feedback.vue",
+    "chunkName": "pages/feedback",
+    "_name": "_1a715a9c"
+  },
+  {
+    "name": "admin-add",
+    "path": "/admin/add",
+    "component": "D:\\\\projects\\\\foton\\\\client\\\\pages\\\\admin\\\\add.vue",
+    "chunkName": "pages/admin/add",
+    "_name": "_2d66ca9f"
+  },
+  {
+    "name": "admin-delete",
+    "path": "/admin/delete",
+    "component": "D:\\\\projects\\\\foton\\\\client\\\\pages\\\\admin\\\\delete.vue",
+    "chunkName": "pages/admin/delete",
+    "_name": "_7633c11d"
+  },
+  {
+    "name": "admin-edit",
+    "path": "/admin/edit",
+    "component": "D:\\\\projects\\\\foton\\\\client\\\\pages\\\\admin\\\\edit.vue",
+    "chunkName": "pages/admin/edit",
+    "_name": "_2b39307c"
+  },
+  {
+    "name": "item-id",
+    "path": "/item/:id?",
+    "component": "D:\\\\projects\\\\foton\\\\client\\\\pages\\\\item\\\\_id.vue",
+    "chunkName": "pages/item/_id",
+    "_name": "_33022cac"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "D:\\\\projects\\\\foton\\\\client\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_30d48375"
+  }
+]

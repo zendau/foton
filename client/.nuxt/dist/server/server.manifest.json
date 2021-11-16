@@ -1,0 +1,37 @@
+{
+  "entry": "server.js",
+  "files": {
+    "components/about.js": "components/about.js",
+    "components/achievements.js": "components/achievements.js",
+    "components/catalog-item.js": "components/catalog-item.js",
+    "components/main-section.js": "components/main-section.js",
+    "components/nuxt-logo.js": "components/nuxt-logo.js",
+    "components/tutorial.js": "components/tutorial.js",
+    "pages/admin/add.js": "pages/admin/add.js",
+    "pages/admin/delete.js": "pages/admin/delete.js",
+    "pages/admin/edit.js": "pages/admin/edit.js",
+    "pages/admin/index.js": "pages/admin/index.js",
+    "pages/catalog.js": "pages/catalog.js",
+    "pages/feedback.js": "pages/feedback.js",
+    "pages/index.js": "pages/index.js",
+    "pages/item/_id.js": "pages/item/_id.js",
+    "server.js": "server.js"
+  },
+  "maps": {
+    "components/about.js": "components/about.js.map",
+    "components/achievements.js": "components/achievements.js.map",
+    "components/catalog-item.js": "components/catalog-item.js.map",
+    "components/main-section.js": "components/main-section.js.map",
+    "components/nuxt-logo.js": "components/nuxt-logo.js.map",
+    "components/tutorial.js": "components/tutorial.js.map",
+    "pages/admin/add.js": "pages/admin/add.js.map",
+    "pages/admin/delete.js": "pages/admin/delete.js.map",
+    "pages/admin/edit.js": "pages/admin/edit.js.map",
+    "pages/admin/index.js": "pages/admin/index.js.map",
+    "pages/catalog.js": "pages/catalog.js.map",
+    "pages/feedback.js": "pages/feedback.js.map",
+    "pages/index.js": "pages/index.js.map",
+    "pages/item/_id.js": "pages/item/_id.js.map",
+    "server.js": "server.js.map"
+  }
+}

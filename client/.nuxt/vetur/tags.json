@@ -1,0 +1,29 @@
+{
+  "About": {
+    "description": "Auto imported from components/about.vue"
+  },
+  "Achievements": {
+    "description": "Auto imported from components/achievements.vue"
+  },
+  "CatalogItem": {
+    "description": "Auto imported from components/catalogItem.vue"
+  },
+  "Footer": {
+    "description": "Auto imported from components/footer.vue"
+  },
+  "Header": {
+    "description": "Auto imported from components/header.vue"
+  },
+  "LoginModal": {
+    "description": "Auto imported from components/loginModal.vue"
+  },
+  "MainSection": {
+    "description": "Auto imported from components/mainSection.vue"
+  },
+  "NuxtLogo": {
+    "description": "Auto imported from components/NuxtLogo.vue"
+  },
+  "Tutorial": {
+    "description": "Auto imported from components/Tutorial.vue"
+  }
+}
