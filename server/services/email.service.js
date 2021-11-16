@@ -12,14 +12,14 @@ class EmailService {
           })
 
         const result = await transporter.sendMail({
-            from: `"Предприятие \"Фотон\"" <${process.env.APP_EMAIL}>`,
+            from: `"Предприятие 'Фотон'" <${process.env.APP_EMAIL}>`,
             to: 'bromankoya@gmail.com',
             subject: subject,
             text: 'Это сообщение с предприятия "Фотон"',
             html: `${text}<br><br>
             Имя отправителя: ${name}<br>
             Компания: ${company}<br>
-            Номер телефона: ${phone}
+            Номер телефона: ${phone}<br>
             Адрес отправителя: ${author}`,
           })
 
