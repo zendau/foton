@@ -10,11 +10,12 @@ class MySql {
         //     database: 'foton',
         //     connectionLimit : 10,
         // })
+
         this.connection = mysql.createPool({
             host: 'eu-cdbr-west-01.cleardb.com',
-            user: 'b2fa16f6302aab',
-            password: '9e64257f',
-            database: 'heroku_bbfb51578901d0f',
+            user: 'bbb013812e6ed8',
+            password: 'ad2e2de6',
+            database: 'heroku_9fc0448a78ac4f3',
             connectionLimit : 10,
         })
         console.log("Connected to MySQL server")

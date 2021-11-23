@@ -36,7 +36,7 @@ export default {
   methods: {
     sendMail() {
 
-      this.$axios.$post('api//email/sendEmail', {
+      this.$axios.$post('api/email/sendEmail', {
         name: this.name,
         company: this.company,
         phone: this.phone,
@@ -48,8 +48,11 @@ export default {
       this.name = ""
       this.subject = ""
       this.email = ""
+      this.phone = ""
     }
   }
+
+
 }
 </script>
 

@@ -5,9 +5,9 @@
         <b-navbar-brand href="/">Главная</b-navbar-brand>
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
-            <b-nav-item href="/admin/add">Добавление продукции</b-nav-item>
-            <b-nav-item href="/admin/edit">Изменение продукции</b-nav-item>
-            <b-nav-item href="/admin/delete">Удаление продукции</b-nav-item>
+            <NuxtLink class="admin-menu__link"  to="/admin/add">Добавление продукции</NuxtLink>
+            <NuxtLink class="admin-menu__link"  to="/admin/edit">Изменение продукции</NuxtLink>
+            <NuxtLink class="admin-menu__link"  to="/admin/delete">Удаление продукции</NuxtLink>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
@@ -23,5 +23,12 @@ export default {
 </script>
 
 <style scoped>
+  .admin-menu__link {
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 10px;
+  }
 
+  .nuxt-link-exact-active {
+    color: #F3D5C0;
+  }
 </style>

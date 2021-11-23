@@ -5,7 +5,7 @@
       <option value="" v-for="item in items" :value="item.title" :key="item.id">{{item.title}}</option>
     </select>
 
-    <b-form>
+    <b-form @submit.prevent="onSubmit">
       <b-form-group
         label="Заголовок"
         label-for="input-1"
@@ -45,7 +45,8 @@ export default {
       selected: null,
       items: [],
       title: "",
-      desk: ""
+      desk: "",
+      id: 0
     }
   },
   methods: {
@@ -53,14 +54,33 @@ export default {
 
       const res = this.items.filter(item => item.title === this.selected)
 
-      console.log(res)
-
       this.title = res[0].title
       this.desk = res[0].desk
+      this.id = res[0].id
+    },
+    async onSubmit() {
+      await this.$axios.put('api/catalog/edit', {
+        id: this.id,
+        title: this.title,
+        desc: this.desk
+      })
+
+      this.items = this.items.map(item => {
+        if (item.title === this.selected) {
+          item.title = this.title
+          item.desk = this.desk
+        }
+
+        return item
+      })
+
+
+
+
     }
   },
   async mounted() {
-    this.items = await this.$axios.$get('http://localhost:8080/catalog/getAllItems')
+    this.items = await this.$axios.$get('api/catalog/getAllItems')
   }
 }
 </script>

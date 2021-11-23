@@ -42,7 +42,9 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: process.env.NODE_ENV === 'production' ? 'https://foton-v2.herokuapp.com' : "http://localhost:8080"
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -52,6 +54,6 @@ export default {
   },
 
   serverMiddleware: [
-    { path: "/api", handler: "~/../server/index.js" },
+    { path: "/api", handler: "~/api/index.js" },
   ],
 }

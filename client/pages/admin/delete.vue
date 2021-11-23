@@ -22,13 +22,20 @@ export default {
     }
   },
   async mounted() {
-    this.items = await this.$axios.$get('http://localhost:8080/catalog/getAllItems')
+    this.items = await this.$axios.$get('api/catalog/getAllItems')
   },
   methods: {
-    onSubmit() {
-      console.log(this.selectedId)
-    }
-  },
+    async onSubmit() {
+      await this.$axios.delete('api/catalog/delete', {
+        data : {
+          id: this.selectedId,
+        }
+      })
+
+      this.items = this.items.filter(item => item.id !== this.selectedId)
+
+    },
+  }
 }
 </script>
 

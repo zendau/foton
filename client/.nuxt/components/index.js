@@ -1,12 +1,12 @@
-export const About = () => import('../..\\components\\about.vue' /* webpackChunkName: "components/about" */).then(c => wrapFunctional(c.default || c))
-export const Achievements = () => import('../..\\components\\achievements.vue' /* webpackChunkName: "components/achievements" */).then(c => wrapFunctional(c.default || c))
-export const CatalogItem = () => import('../..\\components\\catalogItem.vue' /* webpackChunkName: "components/catalog-item" */).then(c => wrapFunctional(c.default || c))
-export const Footer = () => import('../..\\components\\footer.vue' /* webpackChunkName: "components/footer" */).then(c => wrapFunctional(c.default || c))
-export const Header = () => import('../..\\components\\header.vue' /* webpackChunkName: "components/header" */).then(c => wrapFunctional(c.default || c))
-export const LoginModal = () => import('../..\\components\\loginModal.vue' /* webpackChunkName: "components/login-modal" */).then(c => wrapFunctional(c.default || c))
-export const MainSection = () => import('../..\\components\\mainSection.vue' /* webpackChunkName: "components/main-section" */).then(c => wrapFunctional(c.default || c))
-export const NuxtLogo = () => import('../..\\components\\NuxtLogo.vue' /* webpackChunkName: "components/nuxt-logo" */).then(c => wrapFunctional(c.default || c))
-export const Tutorial = () => import('../..\\components\\Tutorial.vue' /* webpackChunkName: "components/tutorial" */).then(c => wrapFunctional(c.default || c))
+export { default as About } from '../..\\components\\about.vue'
+export { default as Achievements } from '../..\\components\\achievements.vue'
+export { default as CatalogItem } from '../..\\components\\catalogItem.vue'
+export { default as Footer } from '../..\\components\\footer.vue'
+export { default as Header } from '../..\\components\\header.vue'
+export { default as LoginModal } from '../..\\components\\loginModal.vue'
+export { default as MainSection } from '../..\\components\\mainSection.vue'
+export { default as NuxtLogo } from '../..\\components\\NuxtLogo.vue'
+export { default as Tutorial } from '../..\\components\\Tutorial.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

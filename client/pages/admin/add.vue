@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     async addItem() {
-      await this.$axios.$post('http://localhost:8080/catalog/create', {
+      await this.$axios.$post('api/catalog/create', {
         title: this.title,
         desc: this.desk
       })
