@@ -2,29 +2,28 @@
   <section class="achievements">
     <h1>Наши достижения</h1>
     <div class="achievements__container">
-      <div class="achievements__item">
+      <div class="achievements__item" v-for="item in achievements" :key="item.id">
         <span class="material-icons">emoji_events</span>
-        <h3 class="achievements__header">Заголовок</h3>
-        <p class="achievements__data">100 шт.</p>
-        <p>Краткое описание достижения</p>
+        <h3 class="achievements__header">{{ item.title }}</h3>
+        <p class="achievements__data">{{ item.count }}</p>
+        <p>{{ item.desc }}</p>
       </div>
-      <div class="achievements__item">
-        <span class="material-icons">emoji_events</span>
-        <h3 class="achievements__header">Заголовок</h3>
-        <p class="achievements__data">100 шт.</p>
-        <p>Краткое описание достижения</p></div>
-      <div class="achievements__item">
-        <span class="material-icons">emoji_events</span>
-        <h3 class="achievements__header">Заголовок</h3>
-        <p class="achievements__data">100 шт.</p>
-        <p>Краткое описание достижения</p> </div>
     </div>
   </section>
 </template>
 
 <script>
 export default {
-  name: "achievements"
+  name: "achievements",
+  data() {
+    return {
+      achievements: []
+    }
+  },
+  async mounted() {
+    this.achievements = await this.$axios.$get('api/admin/achievements/all')
+    console.log(this.achievements)
+  }
 }
 </script>
 

@@ -8,6 +8,7 @@
             <NuxtLink class="admin-menu__link"  to="/admin/add">Добавление продукции</NuxtLink>
             <NuxtLink class="admin-menu__link"  to="/admin/edit">Изменение продукции</NuxtLink>
             <NuxtLink class="admin-menu__link"  to="/admin/delete">Удаление продукции</NuxtLink>
+            <NuxtLink class="admin-menu__link"  to="/admin/content">Редактирование сайта</NuxtLink>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>

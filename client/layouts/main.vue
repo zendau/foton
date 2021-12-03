@@ -57,8 +57,6 @@ export default {
     background-color: #0656a7;
     color: #fff;
     text-align: center;
-    line-height: 40px;
-
   &:hover {
      background-color: #0765c5;
    }

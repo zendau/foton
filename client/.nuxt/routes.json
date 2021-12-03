@@ -28,6 +28,13 @@
     "_name": "_2d66ca9f"
   },
   {
+    "name": "admin-content",
+    "path": "/admin/content",
+    "component": "D:\\\\projects\\\\foton\\\\client\\\\pages\\\\admin\\\\content.vue",
+    "chunkName": "pages/admin/content",
+    "_name": "_7e907777"
+  },
+  {
     "name": "admin-delete",
     "path": "/admin/delete",
     "component": "D:\\\\projects\\\\foton\\\\client\\\\pages\\\\admin\\\\delete.vue",

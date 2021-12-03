@@ -35,7 +35,6 @@ export default {
   &_btn {
     margin-top: 15px;
     margin-bottom: 5px;
-    padding: 0;
   }
 
   &__title {

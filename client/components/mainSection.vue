@@ -1,13 +1,14 @@
 <template>
   <section class="main-section">
-    <h1>Фотон</h1>
-    <p>Разработка электронных компонентов</p>
+    <h1>{{ content.title }}</h1>
+    <p>{{ content.desc }}</p>
   </section>
 </template>
 
 <script>
 export default {
-  name: "mainSection"
+  name: "mainSection",
+  props: ['content']
 }
 </script>
 

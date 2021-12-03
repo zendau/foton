@@ -27,9 +27,7 @@ class CatalogController {
     async getAllItems(req, res, next) {
         try {
             const data = await CatalogService.getAllItems()
-
             const postsDto = data.map(item => new catalogDTO(item))
-
             res.json(postsDto)
         } catch (e) {
             next(e)
@@ -53,8 +51,6 @@ class CatalogController {
             next(e)
         }
     }
-
-
 
 }
 

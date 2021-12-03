@@ -8,6 +8,7 @@ const _7da498d0 = () => interopDefault(import('..\\pages\\admin\\index.vue' /* w
 const _0099a87c = () => interopDefault(import('..\\pages\\catalog.vue' /* webpackChunkName: "pages/catalog" */))
 const _1a715a9c = () => interopDefault(import('..\\pages\\feedback.vue' /* webpackChunkName: "pages/feedback" */))
 const _2d66ca9f = () => interopDefault(import('..\\pages\\admin\\add.vue' /* webpackChunkName: "pages/admin/add" */))
+const _7e907777 = () => interopDefault(import('..\\pages\\admin\\content.vue' /* webpackChunkName: "pages/admin/content" */))
 const _7633c11d = () => interopDefault(import('..\\pages\\admin\\delete.vue' /* webpackChunkName: "pages/admin/delete" */))
 const _2b39307c = () => interopDefault(import('..\\pages\\admin\\edit.vue' /* webpackChunkName: "pages/admin/edit" */))
 const _33022cac = () => interopDefault(import('..\\pages\\item\\_id.vue' /* webpackChunkName: "pages/item/_id" */))
@@ -40,6 +41,10 @@ export const routerOptions = {
     path: "/admin/add",
     component: _2d66ca9f,
     name: "admin-add"
+  }, {
+    path: "/admin/content",
+    component: _7e907777,
+    name: "admin-content"
   }, {
     path: "/admin/delete",
     component: _7633c11d,

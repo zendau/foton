@@ -8,6 +8,7 @@ const cors = require('cors')
 
 const catalogRoute = require("./routes/catalog.route")
 const emailRoute = require("./routes/email.route")
+const adminRoute = require("./routes/admin.route")
 
 const errorMiddleware = require("./middlewares/error.middleware")
 
@@ -23,11 +24,13 @@ app.use(cors({
     origin: process.env.CLIENT_URL
 }))
 
+app.use(errorMiddleware)
 
 app.use("/catalog", catalogRoute)
 app.use("/email", emailRoute)
+app.use("/admin", adminRoute)
 
-app.use(errorMiddleware)
+
 
 module.exports = app
 

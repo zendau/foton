@@ -9,7 +9,7 @@ class EmailService {
                 user: process.env.APP_EMAIL,
                 pass: process.env.APP_EMAIL_PASS,
             },
-        })
+          })
 
         const result = await transporter.sendMail({
             from: `"Предприятие 'Фотон'" <${process.env.APP_EMAIL}>`,
@@ -21,9 +21,9 @@ class EmailService {
             Компания: ${company}<br>
             Номер телефона: ${phone}<br>
             Адрес отправителя: ${author}`,
-        })
+          })
 
-        console.log(result)
+          console.log(result)
     }
 
 }

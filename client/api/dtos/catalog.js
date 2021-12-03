@@ -1,4 +1,4 @@
-module.exports = class PostDto {
+module.exports = class CatalogDto {
     id;
     text;
     desk;

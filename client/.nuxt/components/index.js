@@ -7,6 +7,9 @@ export { default as LoginModal } from '../..\\components\\loginModal.vue'
 export { default as MainSection } from '../..\\components\\mainSection.vue'
 export { default as NuxtLogo } from '../..\\components\\NuxtLogo.vue'
 export { default as Tutorial } from '../..\\components\\Tutorial.vue'
+export { default as UIModal } from '../..\\components\\UI\\modal.vue'
+export { default as AdminContact } from '../..\\components\\admin\\contact.vue'
+export { default as AdminSection } from '../..\\components\\admin\\section.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
