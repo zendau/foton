@@ -2,6 +2,7 @@
   <div class="form-container">
 
     <select class="form-select" @change="onChange" v-model="selected">
+      <option value="" disabled>Выберите элемент для изменения</option>
       <option value="" v-for="item in items" :value="item.title" :key="item.id">{{item.title}}</option>
     </select>
 
@@ -11,7 +12,7 @@
         label-for="input-1"
         description="Заголовок для карточки товара"
       >
-        <b-form-input id="input-1" v-model="title" placeholder="Введите название"></b-form-input>
+        <b-form-input id="input-1" v-model="title" placeholder="Введите название" required></b-form-input>
       </b-form-group>
 
       <b-form-group
@@ -26,12 +27,13 @@
           placeholder="Введите описание"
           rows="3"
           max-rows="6"
+          required
         ></b-form-textarea>
 
       </b-form-group>
 
 
-      <b-button class="btn" type="submit" variant="primary">Сохранить</b-button>
+      <b-button class="btn" type="submit" variant="primary" :disabled="selected === ''">Сохранить</b-button>
     </b-form>
   </div>
 </template>
@@ -42,7 +44,7 @@ export default {
   layout: "admin",
   data() {
     return {
-      selected: null,
+      selected: "",
       items: [],
       title: "",
       desk: "",
@@ -109,5 +111,9 @@ export default {
 .btn {
   padding: 0;
   margin: 0 auto;
+}
+
+button[disabled] {
+  cursor: not-allowed;
 }
 </style>

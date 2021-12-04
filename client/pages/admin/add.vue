@@ -6,7 +6,7 @@
         label-for="input-1"
         description="Заголовок для карточки товара"
       >
-        <b-form-input id="input-1" v-model="title" placeholder="Введите название"></b-form-input>
+        <b-form-input id="input-1" v-model="title" placeholder="Введите название" required></b-form-input>
       </b-form-group>
 
       <b-form-group
@@ -21,6 +21,7 @@
           placeholder="Введите описание"
           rows="3"
           max-rows="6"
+          required
         ></b-form-textarea>
 
       </b-form-group>

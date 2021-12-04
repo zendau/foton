@@ -2,10 +2,11 @@
   <div class="form-container">
     <b-form @submit.prevent="onSubmit">
       <select class="form-select" v-model="selectedId">
+        <option value="" disabled>Выберите элемент для удаления</option>
         <option value="" v-for="item in items" :value="item.id" :key="item.id">{{item.title}}</option>
       </select>
 
-      <b-button class="btn" type="submit" variant="primary">Удалить</b-button>
+      <b-button class="btn" type="submit" variant="primary" :disabled="selectedId === ''">Удалить</b-button>
     </b-form>
   </div>
 </template>
@@ -16,7 +17,7 @@ export default {
   layout: "admin",
   data() {
     return {
-      selectedId: null,
+      selectedId: "",
       items: [],
       title: ""
     }
@@ -62,7 +63,11 @@ export default {
 
 .btn {
   padding: 0;
-  margin: 0 auto;
+  margin: 30px auto;
+}
+
+button[disabled] {
+  cursor: not-allowed;
 }
 
 </style>
