@@ -8,11 +8,11 @@ class CatalogModel {
 	}
 
 	async getAllItems() {
-		return await mysql.query("SELECT * FROM catalog")
+		return await mysql.query("SELECT c.*, i.name AS image FROM catalog c INNER JOIN images i ON (c.id = i.product_id) ORDER BY c.id DESC")
 	}
 
 	async getOneItem(id) {
-		return await mysql.query(`SELECT * FROM catalog WHERE id=${id}`)
+		return await mysql.query(`SELECT c.*, i.name FROM catalog c INNER JOIN images i ON (c.id = i.product_id) WHERE c.id=${id}`)
 	}
 
 	async deleteItem(id) {
@@ -29,6 +29,10 @@ class CatalogModel {
 
   async editImage(product_id, image) {
     return await mysql.query(`UPDATE images SET \`name\`="${image}" WHERE product_id="${product_id}"`)
+  }
+
+  async getImage(product_id) {
+    return await mysql.query(`SELECT \`name\` FROM images WHERE product_id="${product_id}"`)
   }
 
 }

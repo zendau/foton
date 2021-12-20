@@ -32,6 +32,10 @@ class CatalogService {
       return await catalogModel.editImage(product_id, image)
     }
 
+    async getImage(product_id) {
+      return await catalogModel.getImage(product_id)
+    }
+
 }
 
 module.exports = new CatalogService()
