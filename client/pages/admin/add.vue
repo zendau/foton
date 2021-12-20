@@ -15,6 +15,11 @@
         description="Описание товара"
       >
 
+        <div>
+          <label for="image">Изображение товара</label>
+          <input id="image" ref="inputImage" type="file" placeholder="Изображение товара" required>
+        </div>
+
         <b-form-textarea
           id="textarea"
           v-model="desc"
@@ -44,10 +49,14 @@ export default {
   },
   methods: {
     async addItem() {
-      await this.$axios.$post('api/catalog/create', {
-        title: this.title,
-        desc: this.desc
-      })
+
+      const form = new FormData();
+      form.append("title", this.title)
+      form.append("desc", this.desc)
+      form.append('file', this.$refs.inputImage.files[0])
+
+
+      await this.$axios.$post('api/catalog/create', form)
     }
   }
 }

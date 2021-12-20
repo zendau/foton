@@ -15,6 +15,11 @@
         <b-form-input id="input-1" v-model="title" placeholder="Введите название" required></b-form-input>
       </b-form-group>
 
+      <div>
+        <label for="image">Изображение товара</label>
+        <input id="image" ref="inputImage" type="file" placeholder="Изображение товара" required>
+      </div>
+
       <b-form-group
         label="Описание товара"
         label-for="textarea"
@@ -60,11 +65,14 @@ export default {
       this.id = res[0].id
     },
     async onSubmit() {
-      await this.$axios.put('api/catalog/edit', {
-        id: this.id,
-        title: this.title,
-        desc: this.desc
-      })
+
+      const form = new FormData();
+      form.append("id", this.id)
+      form.append("title", this.title)
+      form.append("desc", this.desc)
+      form.append('file', this.$refs.inputImage.files[0])
+
+      await this.$axios.put('api/catalog/edit', form)
 
       this.items = this.items.map(item => {
         if (item.title === this.selected) {
