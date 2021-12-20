@@ -38,6 +38,14 @@ class AdminModel {
         return await mysql.query(`UPDATE achievements SET title="${title}", count="${count}" , \`desc\`="${desc}" WHERE id=${id}`)
     }
 
+    async addImage(product_id, name) {
+      	return await mysql.query(`INSERT INTO images (product_id, name) VALUES ("${product_id}", "${name}")`)
+    }
+
+    async editImage(product_id, name) {
+      return await mysql.query(`UPDATE images SET name="${name}" WHERE product_id=${product_id}`)
+    }
+
 }
 
 module.exports = new AdminModel()

@@ -17,7 +17,7 @@
 
         <b-form-textarea
           id="textarea"
-          v-model="desk"
+          v-model="desc"
           placeholder="Введите описание"
           rows="3"
           max-rows="6"
@@ -39,14 +39,14 @@ export default {
   data() {
     return {
       title: '',
-      desk: ""
+      desc: ""
     }
   },
   methods: {
     async addItem() {
       await this.$axios.$post('api/catalog/create', {
         title: this.title,
-        desc: this.desk
+        desc: this.desc
       })
     }
   }

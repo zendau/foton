@@ -3,7 +3,7 @@
 
     <select class="form-select" @change="onChange" v-model="selected">
       <option value="" disabled>Выберите элемент для изменения</option>
-      <option value="" v-for="item in items" :value="item.title" :key="item.id">{{item.title}}</option>
+      <option v-for="item in items" :value="item.title" :key="item.id">{{item.title}}</option>
     </select>
 
     <b-form @submit.prevent="onSubmit">
@@ -23,7 +23,7 @@
 
         <b-form-textarea
           id="textarea"
-          v-model="desk"
+          v-model="desc"
           placeholder="Введите описание"
           rows="3"
           max-rows="6"
@@ -47,37 +47,33 @@ export default {
       selected: "",
       items: [],
       title: "",
-      desk: "",
+      desc: "",
       id: 0
     }
   },
   methods: {
     onChange() {
-
       const res = this.items.filter(item => item.title === this.selected)
 
       this.title = res[0].title
-      this.desk = res[0].desk
+      this.desc = res[0].desc
       this.id = res[0].id
     },
     async onSubmit() {
       await this.$axios.put('api/catalog/edit', {
         id: this.id,
         title: this.title,
-        desc: this.desk
+        desc: this.desc
       })
 
       this.items = this.items.map(item => {
         if (item.title === this.selected) {
           item.title = this.title
-          item.desk = this.desk
+          item.desc = this.desc
         }
 
         return item
       })
-
-
-
 
     }
   },

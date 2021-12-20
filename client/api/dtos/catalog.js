@@ -1,12 +1,12 @@
 module.exports = class CatalogDto {
     id;
     text;
-    desk;
+    desc;
 
     constructor(model) {
         this.id = model.id;
         this.title = model.title;
-        this.desk = model.desc;
+        this.desc = model.desc;
     }
 
 }

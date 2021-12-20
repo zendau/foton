@@ -30,13 +30,10 @@ app.use("/catalog", catalogRoute)
 app.use("/email", emailRoute)
 app.use("/admin", adminRoute)
 
-
-
 module.exports = app
 
 async function start() {
     try {
-
         app.listen(PORT, () => {
             console.log(`server started on http://localhost:${PORT}`)
         })

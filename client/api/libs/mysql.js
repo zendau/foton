@@ -3,14 +3,6 @@ const mysql = require('mysql')
 class MySql {
 
   constructor() {
-    // this.connection = mysql.createPool({
-    //     host: 'localhost',
-    //     user: 'root',
-    //     password: '',
-    //     database: 'foton',
-    //     connectionLimit : 10,
-    // })
-
     this.connection = mysql.createPool({
       host: 'eu-cdbr-west-01.cleardb.com',
       user: 'bbb013812e6ed8',
@@ -39,16 +31,7 @@ class MySql {
         })
       })
     })
-
-
-
-    // return new Promise((resolve, reject) => {
-    //     this.connection.query(query,(err, rows, fields) => {
-    //         if (err) reject(err)
-    //         resolve(JSON.parse(JSON.stringify(rows)))
-    //     })
-    // })
-
+    
   }
 }
 

@@ -86,8 +86,8 @@ class AdminController {
 
     async create(req, res, next) {
         try {
-            const {title, desc} = req.body
-            const data = await AdminService.create(title, desc)
+            const lastId = await AdminService.create(req.body.title, req.body.desc)
+            const data = await AdminService.addImage(lastId, req.body.image)
             res.json(data)
         } catch (e) {
             next(e)
@@ -124,7 +124,7 @@ class AdminController {
 
     async editItem(req, res, next){
         try {
-            const data = await AdminService.editItem(req.body.id, req.body.title, req.body.desc)
+            const data = await AdminService.editItem(req.body.id, req.body.title, req.body.desc, req.body.image_name)
             res.json(data)
         } catch (e) {
             next(e)

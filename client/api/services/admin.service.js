@@ -5,26 +5,31 @@ const ApiError = require("../exceprions/api.error")
 class AdminService {
 
     async create(title, desc) {
-        return await catalogModel.query(`INSERT INTO catalog (title, \`desc\`) VALUES ("${title}", "${desc}")`)
+        return await catalogModel.createItem(title, desc)
     }
 
     async getAllItems() {
-        return await catalogModel.query("SELECT * FROM catalog")
+        return await catalogModel.getAllItems()
     }
 
     async getOne(id) {
-        return await catalogModel.query(`SELECT * FROM catalog WHERE id=${id}`)
+        return await catalogModel.getOneItem()
     }
 
-    async deleteItem(id){
-        return await catalogModel.query(`DELETE FROM catalog WHERE id=${id}`)
+    async deleteItem(id) {
+        return await catalogModel.deleteItem(id)
     }
 
-    async editItem(id, title, desc){
-        return await catalogModel.query(`UPDATE catalog SET title="${title}", \`desc\`="${desc}" WHERE id=${id}`)
+    async editItem(id, title, desc, image) {
+        const res = await catalogModel.editItem(id, title, desc)
+        return await adminModel.editImage(id, image)
     }
 
-    async login(login, password){
+    async addImage(product_id, image) {
+		  return await catalogModel.addImage(product_id, image)
+    }
+
+    async login(login, password) {
         return await login === process.env.APP_ADMIN_NAME && password == process.env.APP_ADMIN_PASS ? true : false
     }
 
