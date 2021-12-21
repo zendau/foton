@@ -1,6 +1,6 @@
 <template>
     <section class="read-item">
-      <img src="~static/img/item.jpg" alt="" class="read-item__img">
+      <img :src="`http://localhost:8080/catalog_img/${this.item[0].name}`" alt="" class="read-item__img">
       <div class="read-item__data">
         <h2 class="read-item__title">Товар  {{ this.item[0].title }}</h2>
         <p class="read-item__text"> {{this.item[0].desc}} </p>

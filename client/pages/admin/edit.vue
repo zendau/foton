@@ -15,10 +15,20 @@
         <b-form-input id="input-1" v-model="title" placeholder="Введите название" required></b-form-input>
       </b-form-group>
 
+
+      <b-form-group
+        v-if="image"
+        label="Изображение товара"
+        label-for="input-1"
+      >
+        <b-img thumbnail ref="inputImage" fluid :src="`http://localhost:8080/catalog_img/${image}`" alt="Изображение товара"></b-img>
+      </b-form-group>
+
       <div>
-        <label for="image">Изображение товара</label>
+        <label for="image">Новое изображение товара</label>
         <input id="image" ref="inputImage" type="file" placeholder="Изображение товара" required>
       </div>
+
 
       <b-form-group
         label="Описание товара"
@@ -53,7 +63,8 @@ export default {
       items: [],
       title: "",
       desc: "",
-      id: 0
+      id: 0,
+      image: ""
     }
   },
   methods: {
@@ -63,6 +74,7 @@ export default {
       this.title = res[0].title
       this.desc = res[0].desc
       this.id = res[0].id
+      this.image = res[0].image
     },
     async onSubmit() {
 
@@ -87,6 +99,8 @@ export default {
   },
   async mounted() {
     this.items = await this.$axios.$get('api/catalog/getAllItems')
+
+    console.log(this.items)
   }
 }
 </script>

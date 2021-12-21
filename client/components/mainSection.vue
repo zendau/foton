@@ -1,8 +1,10 @@
 <template>
-  <section class="main-section">
-    <h1>{{ content.title }}</h1>
-    <p>{{ content.desc }}</p>
-  </section>
+  <keep-alive>
+    <section class="main-section">
+      <h1>{{ content.title }}</h1>
+      <p>{{ content.desc }}</p>
+    </section>
+  </keep-alive>
 </template>
 
 <script>

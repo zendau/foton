@@ -20,7 +20,7 @@ export default {
       achievements: []
     }
   },
-  async mounted() {
+  async fetch() {
     this.achievements = await this.$axios.$get('api/admin/achievements/all')
     console.log(this.achievements)
   }

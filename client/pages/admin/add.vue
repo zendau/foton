@@ -17,7 +17,7 @@
 
         <div>
           <label for="image">Изображение товара</label>
-          <input id="image" ref="inputImage" type="file" placeholder="Изображение товара" required>
+          <input id="image" ref="inputImage" type="file" placeholder="Изображение товара">
         </div>
 
         <b-form-textarea
@@ -53,8 +53,14 @@ export default {
       const form = new FormData();
       form.append("title", this.title)
       form.append("desc", this.desc)
-      form.append('file', this.$refs.inputImage.files[0])
 
+      let itemImage =  this.$refs.inputImage.files[0]
+
+      if (itemImage === undefined) {
+        itemImage = "item.jpg"
+      }
+
+      form.append('file',itemImage)
 
       await this.$axios.$post('api/catalog/create', form)
     }

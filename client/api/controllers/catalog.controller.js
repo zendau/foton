@@ -1,6 +1,6 @@
 const CatalogService = require("../services/catalog.service")
 const catalogDTO = require("../dtos/catalog")
-const uploadFile = require("../middlewares/upload")
+const uploadFile = require("../libs/upload")
 const fs = require("fs")
 
 class CatalogController {
@@ -45,10 +45,10 @@ class CatalogController {
         }
     }
 
-
     async getAllItems(req, res, next) {
         try {
             const data = await CatalogService.getAllItems()
+            console.log(data)
             const postsDto = data.map(item => new catalogDTO(item))
             res.json(postsDto)
         } catch (e) {
@@ -94,6 +94,15 @@ class CatalogController {
             next(e)
         }
     }
+
+    async getImage(req, res, next) {
+      try {
+          const data = await CatalogService.getImage(req.params.product_id)
+          res.json(data)
+      } catch (e) {
+          next(e)
+      }
+  }
 
 }
 

@@ -81,6 +81,7 @@ export default {
 
 &__login {
    grid-area: menu-login;
+    cursor: pointer;
  }
 
 }

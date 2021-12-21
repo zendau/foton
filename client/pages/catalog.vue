@@ -1,7 +1,7 @@
 <template>
   <section class="catalog">
     <div class="wrapper">
-      <catalog-item v-for="item in items" :key="item.id" :id="item.id" :title="item.title"/>
+      <catalog-item v-for="item in items" :key="item.id" :id="item.id" :title="item.title" :img="item.image" />
     </div>
   </section>
 </template>
