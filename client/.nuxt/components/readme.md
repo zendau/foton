@@ -15,6 +15,6 @@ You can directly use them in pages and other components without the need to impo
 - `<MainSection>` | `<main-section>` (components/mainSection.vue)
 - `<NuxtLogo>` | `<nuxt-logo>` (components/NuxtLogo.vue)
 - `<Tutorial>` | `<tutorial>` (components/Tutorial.vue)
+- `<UIModal>` | `<u-i-modal>` (components/UI/modal.vue)
 - `<AdminContact>` | `<admin-contact>` (components/admin/contact.vue)
 - `<AdminSection>` | `<admin-section>` (components/admin/section.vue)
-- `<UIModal>` | `<u-i-modal>` (components/UI/modal.vue)
