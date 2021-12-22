@@ -4,15 +4,15 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _7a528f2c = () => interopDefault(import('..\\pages\\admin\\index.vue' /* webpackChunkName: "pages/admin/index" */))
-const _8c369ebc = () => interopDefault(import('..\\pages\\catalog.vue' /* webpackChunkName: "pages/catalog" */))
-const _62dd4f4c = () => interopDefault(import('..\\pages\\feedback.vue' /* webpackChunkName: "pages/feedback" */))
-const _201fee8e = () => interopDefault(import('..\\pages\\admin\\add.vue' /* webpackChunkName: "pages/admin/add" */))
-const _3fb91891 = () => interopDefault(import('..\\pages\\admin\\content.vue' /* webpackChunkName: "pages/admin/content" */))
-const _5174d67a = () => interopDefault(import('..\\pages\\admin\\delete.vue' /* webpackChunkName: "pages/admin/delete" */))
-const _8c5094bc = () => interopDefault(import('..\\pages\\admin\\edit.vue' /* webpackChunkName: "pages/admin/edit" */))
-const _79288050 = () => interopDefault(import('..\\pages\\item\\_id.vue' /* webpackChunkName: "pages/item/_id" */))
-const _b52145ca = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _7da498d0 = () => interopDefault(import('..\\pages\\admin\\index.vue' /* webpackChunkName: "pages/admin/index" */))
+const _0099a87c = () => interopDefault(import('..\\pages\\catalog.vue' /* webpackChunkName: "pages/catalog" */))
+const _1a715a9c = () => interopDefault(import('..\\pages\\feedback.vue' /* webpackChunkName: "pages/feedback" */))
+const _2d66ca9f = () => interopDefault(import('..\\pages\\admin\\add.vue' /* webpackChunkName: "pages/admin/add" */))
+const _7e907777 = () => interopDefault(import('..\\pages\\admin\\content.vue' /* webpackChunkName: "pages/admin/content" */))
+const _7633c11d = () => interopDefault(import('..\\pages\\admin\\delete.vue' /* webpackChunkName: "pages/admin/delete" */))
+const _2b39307c = () => interopDefault(import('..\\pages\\admin\\edit.vue' /* webpackChunkName: "pages/admin/edit" */))
+const _33022cac = () => interopDefault(import('..\\pages\\item\\_id.vue' /* webpackChunkName: "pages/item/_id" */))
+const _30d48375 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -27,39 +27,39 @@ export const routerOptions = {
 
   routes: [{
     path: "/admin",
-    component: _7a528f2c,
+    component: _7da498d0,
     name: "admin"
   }, {
     path: "/catalog",
-    component: _8c369ebc,
+    component: _0099a87c,
     name: "catalog"
   }, {
     path: "/feedback",
-    component: _62dd4f4c,
+    component: _1a715a9c,
     name: "feedback"
   }, {
     path: "/admin/add",
-    component: _201fee8e,
+    component: _2d66ca9f,
     name: "admin-add"
   }, {
     path: "/admin/content",
-    component: _3fb91891,
+    component: _7e907777,
     name: "admin-content"
   }, {
     path: "/admin/delete",
-    component: _5174d67a,
+    component: _7633c11d,
     name: "admin-delete"
   }, {
     path: "/admin/edit",
-    component: _8c5094bc,
+    component: _2b39307c,
     name: "admin-edit"
   }, {
     path: "/item/:id?",
-    component: _79288050,
+    component: _33022cac,
     name: "item-id"
   }, {
     path: "/",
-    component: _b52145ca,
+    component: _30d48375,
     name: "index"
   }],
 

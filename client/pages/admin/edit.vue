@@ -20,15 +20,19 @@
         v-if="image"
         label="Изображение товара"
         label-for="input-1"
+        class="demoImg"
       >
         <b-img thumbnail ref="inputImage" fluid :src="`http://localhost:8080/catalog_img/${image}`" alt="Изображение товара"></b-img>
       </b-form-group>
 
-      <div>
-        <label for="image">Новое изображение товара</label>
-        <input id="image" ref="inputImage" type="file" placeholder="Изображение товара" required>
-      </div>
 
+      <b-form-file
+        v-model="fileImg"
+        browse-text="Проводник"
+        placeholder="Новое изображение продукции"
+        drop-placeholder="Перетащите изображение сюда..."
+        class="fileInput"
+      ></b-form-file>
 
       <b-form-group
         label="Описание товара"
@@ -64,7 +68,8 @@ export default {
       title: "",
       desc: "",
       id: 0,
-      image: ""
+      image: "",
+      fileImg: ""
     }
   },
   methods: {
@@ -107,7 +112,7 @@ export default {
 
 <style scoped>
 .form-container {
-  width: 600px;
+  width: 800px;
   margin: 30px auto 0;
 }
 
@@ -124,6 +129,7 @@ export default {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   appearance: none;
+  margin-bottom: 20px;
 }
 
 .btn {
@@ -134,4 +140,16 @@ export default {
 button[disabled] {
   cursor: not-allowed;
 }
+
+.fileInput {
+  margin-bottom: 20px;
+}
+
+.demoImg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <MainSection :content="this.content[0]"/>
+    <MainSection  :content="this.content[0]"/>
     <About :content="this.content[1]"/>
     <Achievements/>
   </div>
@@ -12,10 +12,8 @@ export default {
   data() {
     this.content = []
   },
-  async fetch() {
-    this.content = await this.$axios.$get('api/admin/sections/all')
-  },
   async asyncData({ params, $axios  }) {
+
 
     const content = await $axios.$get('api/admin/sections/all')
 

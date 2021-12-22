@@ -4,21 +4,24 @@
       <b-form-group
         label="Заголовок"
         label-for="input-1"
-        description="Заголовок для карточки товара"
+        description="Заголовок для карточки продукции"
       >
         <b-form-input id="input-1" v-model="title" placeholder="Введите название" required></b-form-input>
       </b-form-group>
+
+      <b-form-file
+        v-model="fileImg"
+        browse-text="Проводник"
+        placeholder="Изображение продукции"
+        drop-placeholder="Перетащите изображение сюда..."
+        class="fileInput"
+      ></b-form-file>
 
       <b-form-group
         label="Описание товара"
         label-for="textarea"
         description="Описание товара"
       >
-
-        <div>
-          <label for="image">Изображение товара</label>
-          <input id="image" ref="inputImage" type="file" placeholder="Изображение товара">
-        </div>
 
         <b-form-textarea
           id="textarea"
@@ -44,7 +47,8 @@ export default {
   data() {
     return {
       title: '',
-      desc: ""
+      desc: "",
+      fileImg: null
     }
   },
   methods: {
@@ -53,14 +57,7 @@ export default {
       const form = new FormData();
       form.append("title", this.title)
       form.append("desc", this.desc)
-
-      let itemImage =  this.$refs.inputImage.files[0]
-
-      if (itemImage === undefined) {
-        itemImage = "item.jpg"
-      }
-
-      form.append('file',itemImage)
+      form.append('file', this.fileImg)
 
       await this.$axios.$post('api/catalog/create', form)
     }
@@ -70,13 +67,17 @@ export default {
 
 <style scoped>
   .form-container {
-    width: 600px;
+    width: 800px;
     margin: 30px auto 0;
   }
 
   .btn {
     padding: 0;
     margin: 0 auto;
+  }
+
+  .fileInput {
+    margin-bottom: 20px;
   }
 
 </style>

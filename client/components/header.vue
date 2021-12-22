@@ -7,20 +7,15 @@
         <li><NuxtLink class="main-menu__link"  to="/catalog">Производство</NuxtLink></li>
         <li><NuxtLink class="main-menu__link"  to="/feedback">Обратная связь</NuxtLink></li>
       </ul>
-      <a class="main-menu__login main-menu__link" @click="openModal">Вход</a>
+      <a class="main-menu__login main-menu__link" v-b-modal.loginModal>Вход</a>
     </nav>
   </header>
 </template>
 
 <script>
 export default {
-  name: "headerComponent",
-  emits: ["openModal"],
-  methods: {
-    openModal() {
-      this.$emit("openModal")
-    }
-  }
+  name: "headerComponent"
+
 }
 </script>
 

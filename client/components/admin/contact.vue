@@ -4,7 +4,7 @@
         label="Заголовок"
         :label-for="`input-1${contactData.id}`"
       >
-        <b-form-input :id="`input-1${contactData.id}`" v-model="contactData.title" placeholder="Введите название"></b-form-input>
+        <b-form-input disabled :id="`input-1${contactData.id}`" v-model="contactData.title" placeholder="Введите название"></b-form-input>
       </b-form-group>
       <b-form-group
         label="Содержимое"

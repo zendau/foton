@@ -6,19 +6,27 @@
       <div class="footer__container">
         <div class="footer__item">
           <span class="material-icons">phone</span>
-          <p>+7 (9999) 99-99-99</p>
+          <p>{{footerData[0] ? footerData[0].desc : ''}}</p>
+        </div>
+        <div class="footer__item">
+          <span class="material-icons">phone</span>
+          <p>{{footerData[1] ? footerData[1].desc : ''}}</p>
         </div>
         <div class="footer__item">
           <span class="material-icons">email</span>
-          <p>fotonLPR@gmail.com</p>
+          <p>{{footerData[2] ? footerData[2].desc : ''}}</p>
         </div>
         <div class="footer__item">
           <span class="material-icons">place</span>
           <p>Г. Алчевск, ул. Победы, дом. 7</p>
         </div>
         <div class="footer__item">
-          <p>ИНН 3232038930</p>
+          <p>ЕГРЮЛ - {{footerData[3] ? footerData[3].desc : ''}}</p>
         </div>
+        <div class="footer__item">
+          <p>ИНН - {{footerData[4] ? footerData[4].desc : ''}}</p>
+        </div>
+
       </div>
       <p></p>
     </div>
@@ -35,7 +43,20 @@
 
 <script>
 export default {
-  name: "footerComponent"
+  name: "footerComponent",
+  data() {
+    return {
+      footerData: []
+    }
+  },
+  async mounted() {
+
+
+    this.footerData = await this.$axios.$get('api/admin/contacts/all')
+
+    console.log(this.footerData)
+
+  }
 }
 </script>
 

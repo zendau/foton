@@ -20,19 +20,13 @@
   "MainSection": {
     "description": "Auto imported from components/mainSection.vue"
   },
-  "NuxtLogo": {
-    "description": "Auto imported from components/NuxtLogo.vue"
-  },
-  "Tutorial": {
-    "description": "Auto imported from components/Tutorial.vue"
-  },
-  "UIModal": {
-    "description": "Auto imported from components/UI/modal.vue"
-  },
   "AdminContact": {
     "description": "Auto imported from components/admin/contact.vue"
   },
   "AdminSection": {
     "description": "Auto imported from components/admin/section.vue"
+  },
+  "UIModal": {
+    "description": "Auto imported from components/UI/modal.vue"
   }
 }

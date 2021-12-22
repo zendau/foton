@@ -2,64 +2,64 @@
   {
     "name": "admin",
     "path": "/admin",
-    "component": "E:\\\\scs\\\\foton2\\\\foton\\\\client\\\\pages\\\\admin\\\\index.vue",
+    "component": "D:\\\\projects\\\\foton\\\\client\\\\pages\\\\admin\\\\index.vue",
     "chunkName": "pages/admin/index",
-    "_name": "_7a528f2c"
+    "_name": "_7da498d0"
   },
   {
     "name": "catalog",
     "path": "/catalog",
-    "component": "E:\\\\scs\\\\foton2\\\\foton\\\\client\\\\pages\\\\catalog.vue",
+    "component": "D:\\\\projects\\\\foton\\\\client\\\\pages\\\\catalog.vue",
     "chunkName": "pages/catalog",
-    "_name": "_8c369ebc"
+    "_name": "_0099a87c"
   },
   {
     "name": "feedback",
     "path": "/feedback",
-    "component": "E:\\\\scs\\\\foton2\\\\foton\\\\client\\\\pages\\\\feedback.vue",
+    "component": "D:\\\\projects\\\\foton\\\\client\\\\pages\\\\feedback.vue",
     "chunkName": "pages/feedback",
-    "_name": "_62dd4f4c"
+    "_name": "_1a715a9c"
   },
   {
     "name": "admin-add",
     "path": "/admin/add",
-    "component": "E:\\\\scs\\\\foton2\\\\foton\\\\client\\\\pages\\\\admin\\\\add.vue",
+    "component": "D:\\\\projects\\\\foton\\\\client\\\\pages\\\\admin\\\\add.vue",
     "chunkName": "pages/admin/add",
-    "_name": "_201fee8e"
+    "_name": "_2d66ca9f"
   },
   {
     "name": "admin-content",
     "path": "/admin/content",
-    "component": "E:\\\\scs\\\\foton2\\\\foton\\\\client\\\\pages\\\\admin\\\\content.vue",
+    "component": "D:\\\\projects\\\\foton\\\\client\\\\pages\\\\admin\\\\content.vue",
     "chunkName": "pages/admin/content",
-    "_name": "_3fb91891"
+    "_name": "_7e907777"
   },
   {
     "name": "admin-delete",
     "path": "/admin/delete",
-    "component": "E:\\\\scs\\\\foton2\\\\foton\\\\client\\\\pages\\\\admin\\\\delete.vue",
+    "component": "D:\\\\projects\\\\foton\\\\client\\\\pages\\\\admin\\\\delete.vue",
     "chunkName": "pages/admin/delete",
-    "_name": "_5174d67a"
+    "_name": "_7633c11d"
   },
   {
     "name": "admin-edit",
     "path": "/admin/edit",
-    "component": "E:\\\\scs\\\\foton2\\\\foton\\\\client\\\\pages\\\\admin\\\\edit.vue",
+    "component": "D:\\\\projects\\\\foton\\\\client\\\\pages\\\\admin\\\\edit.vue",
     "chunkName": "pages/admin/edit",
-    "_name": "_8c5094bc"
+    "_name": "_2b39307c"
   },
   {
     "name": "item-id",
     "path": "/item/:id?",
-    "component": "E:\\\\scs\\\\foton2\\\\foton\\\\client\\\\pages\\\\item\\\\_id.vue",
+    "component": "D:\\\\projects\\\\foton\\\\client\\\\pages\\\\item\\\\_id.vue",
     "chunkName": "pages/item/_id",
-    "_name": "_79288050"
+    "_name": "_33022cac"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "E:\\\\scs\\\\foton2\\\\foton\\\\client\\\\pages\\\\index.vue",
+    "component": "D:\\\\projects\\\\foton\\\\client\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_b52145ca"
+    "_name": "_30d48375"
   }
 ]

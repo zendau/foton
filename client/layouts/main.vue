@@ -2,7 +2,7 @@
   <div class="container-100vh">
     <header-component v-on:openModal="openModal" />
     <div class="body-container">
-      <Nuxt />
+      <Nuxt keep-alive />
     </div>
     <login-modal :status="modalStatus" v-on:closeModal="closeModal"/>
     <footer-component />

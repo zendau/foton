@@ -10,13 +10,18 @@
 export default {
   name: "catalog",
   layout: "main",
-  async mounted() {
-    this.items = await this.$axios.$get('api/catalog/getAllItems')
-  },
   data() {
     return {
       items: []
     }
+  },
+  async asyncData({ params, $axios  }) {
+
+
+    const items = await $axios.$get('api/catalog/getAllItems')
+
+
+    return { items }
   }
 }
 </script>
