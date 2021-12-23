@@ -14,6 +14,7 @@
         browse-text="Проводник"
         placeholder="Изображение продукции"
         drop-placeholder="Перетащите изображение сюда..."
+        accept="image/*"
         class="fileInput"
       ></b-form-file>
 

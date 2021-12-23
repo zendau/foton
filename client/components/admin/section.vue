@@ -4,7 +4,7 @@
       label="Заголовок"
       label-for="input-1"
     >
-      <b-form-input id="input-1" v-model="content.title" placeholder="Введите название"></b-form-input>
+      <b-form-input id="input-1" v-model="content.title" placeholder="Введите название" required></b-form-input>
     </b-form-group>
     <b-form-group
       label="Описание"
@@ -17,17 +17,18 @@
         placeholder="Введите описание"
         rows="3"
         max-rows="6"
+        required
       ></b-form-textarea>
 
     </b-form-group>
 
     <b-form-group
       v-if="type === 'achievement'"
-      label="Кол-во"
+      label="Значение"
       label-for="textarea"
     >
 
-      <b-form-input id="input-1" v-model="content.count" placeholder="Введите кол-во"></b-form-input>
+      <b-form-input id="input-1" v-model="content.count" placeholder="Введите значение" required></b-form-input>
 
     </b-form-group>
 
