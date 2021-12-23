@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <p class="footer__copyright">© 2021 Фотон.</p>
+    <p class="footer__copyright">© {{ new Date().getFullYear() }} Фотон.</p>
     <div class="footer__contacts">
       <h2 class="footer__header" >Наши контакты</h2>
       <div class="footer__container">
