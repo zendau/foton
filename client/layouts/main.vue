@@ -107,4 +107,30 @@ export default {
     flex-direction: column;
   }
 
+  @media (max-width: 720px) {
+
+  }
+
+  @media (max-width: 1200px) {
+
+    section {
+      width: auto;
+    }
+
+    .about {
+      padding: 20px 50px 100px;
+    }
+
+
+    .achievements__container {
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: 1fr!important;
+      grid-row-gap: 20px;
+      width: 100%!important;
+    }
+
+
+
+  }
+
 </style>

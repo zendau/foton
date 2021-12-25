@@ -29,4 +29,16 @@ export default {
     }
 
   }
+
+  @media (max-width: 1200px) {
+    .catalog__item {
+      width: 260px;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .catalog__item {
+      box-sizing: border-box;
+    }
+  }
 </style>

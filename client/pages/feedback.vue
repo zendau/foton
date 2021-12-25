@@ -113,4 +113,43 @@ export default {
   }
 
 }
+
+@media (max-width: 860px) {
+  .contact-form {
+
+    h1 {
+      margin-top: 15px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 600px;
+
+      input[type="text"], textarea {
+        width: 90%;
+        margin-right: 0;
+      }
+
+
+      input[type="submit"] {
+        align-self: center;
+        margin-bottom: 20px;
+      }
+
+    }
+
+
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-form {
+    form {
+      max-width: 500px;
+    }
+  }
+}
+
 </style>

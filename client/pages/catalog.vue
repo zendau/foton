@@ -54,4 +54,42 @@ export default {
   }
 
 }
+
+@media (max-width: 1200px) {
+  .catalog {
+    width: 800px;
+
+    .wrapper {
+      grid-template-columns: repeat(3, 270px);
+    }
+
+  }
+
+}
+
+
+@media (max-width: 820px) {
+  .catalog {
+    width: 600px;
+
+    .wrapper {
+      grid-template-columns: repeat(2, 300px);
+      justify-items: center;
+    }
+
+  }
+
+}
+
+@media (max-width: 720px) {
+  .catalog {
+    width: 550px;
+
+    .wrapper {
+      grid-template-columns: repeat(2, 275px);
+    }
+
+  }
+}
+
 </style>

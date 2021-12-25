@@ -47,4 +47,20 @@ export default {
   }
 
 }
+
+@media (max-width: 1200px) {
+  .read-item {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 720px) {
+  .read-item {
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-row-gap: 35px;
+    grid-column-gap: 0;
+  }
+}
+
 </style>

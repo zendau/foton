@@ -137,4 +137,43 @@ export default {
 
 
   }
+
+  @media (max-width: 720px) {
+    .footer {
+      grid-template-columns: 1fr!important;
+    }
+
+    .footer__copyright {
+      grid-row: 3/4!important;
+    }
+  }
+
+  @media (max-width: 1200px) {
+
+
+    .footer {
+      grid-template-columns: 3fr 1fr;
+      grid-column-gap: 0;
+    }
+
+    .footer__contacts {
+      margin: 0 20px!important;
+    }
+
+    .footer__item {
+      margin-right: 0!important;
+    }
+
+    .footer__copyright {
+      grid-row: 2/3;
+      justify-self: left!important;
+      margin-left: 30px;
+      margin-top: 20px;
+    }
+
+    .footer__socials {
+      margin-right: 25px!important;
+    }
+
+  }
 </style>

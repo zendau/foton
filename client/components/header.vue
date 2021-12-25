@@ -1,15 +1,33 @@
 <template>
-  <header>
-    <nav class="main-menu">
-      <NuxtLink class="main-menu__logo" to="/"><img src="~static/img/logo.png" alt="лого"></NuxtLink>
-      <ul class="main-menu__items">
-        <li><NuxtLink class="main-menu__link" :prefetch="false" to="/">Главная</NuxtLink></li>
-        <li><NuxtLink class="main-menu__link"  to="/catalog">Производство</NuxtLink></li>
-        <li><NuxtLink class="main-menu__link"  to="/feedback">Обратная связь</NuxtLink></li>
-      </ul>
-      <a class="main-menu__login main-menu__link" v-b-modal.loginModal>Вход</a>
-    </nav>
-  </header>
+  <b-navbar toggleable="lg" type="dark" variant="info" class="main-menu">
+    <NuxtLink class="main-menu__logo" to="/"><img src="~static/img/logo.png" alt="лого"></NuxtLink>
+
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+    <b-collapse id="nav-collapse" is-nav class="ml-5">
+      <b-navbar-nav>
+        <NuxtLink class="main-menu__link" :prefetch="false" to="/">Главная</NuxtLink>
+        <NuxtLink class="main-menu__link"  to="/catalog">Производство</NuxtLink>
+        <NuxtLink class="main-menu__link"  to="/feedback">Обратная связь</NuxtLink>
+      </b-navbar-nav>
+
+      <b-navbar-nav class="ml-auto">
+        <b-nav-item href="#" class="main-menu__login main-menu__link" v-b-modal.loginModal>Вход</b-nav-item>
+      </b-navbar-nav>
+
+    </b-collapse>
+  </b-navbar>
+<!--  <header>-->
+<!--    <nav class="main-menu">-->
+<!--      -->
+<!--      <ul class="main-menu__items">-->
+<!--        <li></li>-->
+<!--        <li></li>-->
+<!--        <li></li>-->
+<!--      </ul>-->
+<!--      <a </a>-->
+<!--    </nav>-->
+<!--  </header>-->
 </template>
 
 <script>
@@ -21,13 +39,7 @@ export default {
 
 <style scoped lang="scss">
 .main-menu {
-  display: grid;
-  grid-template-columns: 1.5fr 5fr 1fr;
-  grid-template-areas: "menu-logo menu-nav menu-login";
-  grid-column-gap: 15px;
-  align-items: center;
-  justify-items: center;
-  background-color: #506D84;
+  background-color: #506D84!important;
 
 &__logo {
    grid-area: menu-logo;
@@ -54,7 +66,7 @@ export default {
 
 &:before {
    position: absolute;
-   top: 33px;
+   top: 50px;
    left: 0;
    display: block;
    height: 3px;
@@ -84,4 +96,21 @@ export default {
 .nuxt-link-exact-active {
   color: #F3D5C0;
 }
+
+@media (max-width: 988px) {
+  .main-menu__link {
+    &:before {
+      display: none;
+    }
+  }
+  .navbar-nav {
+    margin-top: 10px;
+  }
+
+  .main-menu__link {
+    margin: 10px 0;
+    font-size: 24px;
+  }
+}
+
 </style>
