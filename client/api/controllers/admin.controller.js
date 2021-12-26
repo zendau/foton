@@ -1,5 +1,5 @@
 const AdminService = require("../services/admin.service")
-const catalogDTO = require("../dtos/catalog")
+const UserDto = require("../dtos/user")
 
 class AdminController {
 
@@ -84,47 +84,10 @@ class AdminController {
         }
     }
 
-    async create(req, res, next) {
+    async getUser(req, res, next){
         try {
-            const lastId = await AdminService.create(req.body.title, req.body.desc)
-            const data = await AdminService.addImage(lastId, req.body.image)
-            res.json(data)
-        } catch (e) {
-            next(e)
-        }
-    }
+            const data = await AdminService.getUserByName(req.params.username)
 
-    async getOne(req, res, next) {
-        try {
-            const data = await AdminService.getOne(req.params.id)
-            res.json(data)
-        } catch (e) {
-            next(e)
-        }
-    }
-
-    async getAllItems(req, res, next) {
-        try {
-            const data = await AdminService.getAllItems()
-            const postsDto = data.map(item => new catalogDTO(item))
-            res.json(postsDto)
-        } catch (e) {
-            next(e)
-        }
-    }
-
-    async deleteItem(req, res, next){
-        try {
-            const data = await AdminService.deleteItem(req.body.id)
-            res.json(data)
-        } catch (e) {
-            next(e)
-        }
-    }
-
-    async editItem(req, res, next){
-        try {
-            const data = await AdminService.editItem(req.body.id, req.body.title, req.body.desc, req.body.image_name)
             res.json(data)
         } catch (e) {
             next(e)
@@ -133,7 +96,22 @@ class AdminController {
 
     async login(req, res, next){
         try {
-            const data = await AdminService.login(req.body.name, req.body.pass)
+            const data = await AdminService.getUserByName(req.body.username)
+            const id = data[0]["id"]
+            const data2 = await AdminService.getPassById(id)
+
+            const username = data[0]["username"]
+            const password = data2[0]["password"]
+
+            res.json(req.body.username === username && req.body.password === password ? true : false)
+        } catch (e) {
+            next(e)
+        }
+    }
+
+    async editUser(req, res, next){
+        try {
+            const data = await AdminService.editUser(req.body.id, req.body.username, req.body.password)
             res.json(data)
         } catch (e) {
             next(e)

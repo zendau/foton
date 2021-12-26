@@ -1,6 +1,4 @@
 const catalogModel = require("../models/catalog.model")
-const ApiError = require("../exceprions/api.error")
-const catalogDTO = require("../dtos/catalog")
 
 class CatalogService {
 

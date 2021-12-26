@@ -1,36 +1,17 @@
-const catalogModel = require("../models/catalog.model")
 const adminModel = require("../models/admin.model")
-const ApiError = require("../exceprions/api.error")
 
 class AdminService {
 
-    async create(title, desc) {
-        return await catalogModel.createItem(title, desc)
+    async getUserByName(username) {
+        return await adminModel.getUserByName(username)
     }
 
-    async getAllItems() {
-        return await catalogModel.getAllItems()
+    async getPassById(id) {
+        return await adminModel.getPassById(id)
     }
 
-    async getOne(id) {
-        return await catalogModel.getOneItem()
-    }
-
-    async deleteItem(id) {
-        return await catalogModel.deleteItem(id)
-    }
-
-    async editItem(id, title, desc, image) {
-        const res = await catalogModel.editItem(id, title, desc)
-        return await adminModel.editImage(id, image)
-    }
-
-    async addImage(product_id, image) {
-		  return await catalogModel.addImage(product_id, image)
-    }
-
-    async login(login, password) {
-        return await login === process.env.APP_ADMIN_NAME && password == process.env.APP_ADMIN_PASS ? true : false
+    async editUser(id, username, password) {
+        return await adminModel.editUser(id, username, password)
     }
 
     async getAllSections() {

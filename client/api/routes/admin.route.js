@@ -2,12 +2,9 @@ const Router = require('express').Router
 const AdminController = require('../controllers/admin.controller')
 const router = new Router()
 
-router.post("/create", AdminController.create)
-router.get("/get/:id", AdminController.getOne)
-router.get("/getAllItems", AdminController.getAllItems)
-router.delete("/delete", AdminController.deleteItem)
-router.put("/edit", AdminController.editItem)
+router.get("/users/get/:username", AdminController.getUser)
 router.post("/login", AdminController.login)
+router.put("/users/edit", AdminController.editUser)
 
 router.get("/sections/all", AdminController.allSections)
 router.get("/sections/get/:id", AdminController.getSection)

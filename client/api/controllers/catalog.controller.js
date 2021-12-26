@@ -63,7 +63,6 @@ class CatalogController {
     async getAllItems(req, res, next) {
         try {
             const data = await CatalogService.getAllItems()
-            console.log(data)
             const postsDto = data.map(item => new catalogDTO(item))
             res.json(postsDto)
         } catch (e) {
