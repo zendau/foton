@@ -86,7 +86,7 @@ export default {
     width: 550px;
 
     .wrapper {
-      grid-template-columns: repeat(2, 275px);
+      grid-template-columns: 1fr;
     }
 
   }

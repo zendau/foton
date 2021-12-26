@@ -143,14 +143,26 @@ export default {
       grid-template-columns: 1fr!important;
     }
 
+    .footer__container {
+      display: flex;
+      flex-direction: column;
+      max-height: inherit;
+    }
+
+    .footer__header {
+      margin-bottom: 15px;
+    }
+
+    .footer__item {
+      width: inherit;
+    }
+
     .footer__copyright {
       grid-row: 3/4!important;
     }
   }
 
   @media (max-width: 1200px) {
-
-
     .footer {
       grid-template-columns: 3fr 1fr;
       grid-column-gap: 0;

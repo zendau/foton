@@ -36,6 +36,10 @@ class CatalogService {
       return await catalogModel.getImage(product_id)
     }
 
+    async rmImage(image_name) {
+      return await catalogModel.rmImage(image_name)
+    }
+
 }
 
 module.exports = new CatalogService()

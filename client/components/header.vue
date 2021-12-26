@@ -111,6 +111,10 @@ export default {
     margin: 10px 0;
     font-size: 24px;
   }
+
+  .main-menu__login {
+    display: none;
+  }
 }
 
 </style>

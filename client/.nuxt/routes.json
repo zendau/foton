@@ -1,0 +1,65 @@
+[
+  {
+    "name": "admin",
+    "path": "/admin",
+    "component": "E:\\\\scs\\\\foton2\\\\foton\\\\client\\\\pages\\\\admin\\\\index.vue",
+    "chunkName": "pages/admin/index",
+    "_name": "_7a528f2c"
+  },
+  {
+    "name": "catalog",
+    "path": "/catalog",
+    "component": "E:\\\\scs\\\\foton2\\\\foton\\\\client\\\\pages\\\\catalog.vue",
+    "chunkName": "pages/catalog",
+    "_name": "_8c369ebc"
+  },
+  {
+    "name": "feedback",
+    "path": "/feedback",
+    "component": "E:\\\\scs\\\\foton2\\\\foton\\\\client\\\\pages\\\\feedback.vue",
+    "chunkName": "pages/feedback",
+    "_name": "_62dd4f4c"
+  },
+  {
+    "name": "admin-add",
+    "path": "/admin/add",
+    "component": "E:\\\\scs\\\\foton2\\\\foton\\\\client\\\\pages\\\\admin\\\\add.vue",
+    "chunkName": "pages/admin/add",
+    "_name": "_201fee8e"
+  },
+  {
+    "name": "admin-content",
+    "path": "/admin/content",
+    "component": "E:\\\\scs\\\\foton2\\\\foton\\\\client\\\\pages\\\\admin\\\\content.vue",
+    "chunkName": "pages/admin/content",
+    "_name": "_3fb91891"
+  },
+  {
+    "name": "admin-delete",
+    "path": "/admin/delete",
+    "component": "E:\\\\scs\\\\foton2\\\\foton\\\\client\\\\pages\\\\admin\\\\delete.vue",
+    "chunkName": "pages/admin/delete",
+    "_name": "_5174d67a"
+  },
+  {
+    "name": "admin-edit",
+    "path": "/admin/edit",
+    "component": "E:\\\\scs\\\\foton2\\\\foton\\\\client\\\\pages\\\\admin\\\\edit.vue",
+    "chunkName": "pages/admin/edit",
+    "_name": "_8c5094bc"
+  },
+  {
+    "name": "item-id",
+    "path": "/item/:id?",
+    "component": "E:\\\\scs\\\\foton2\\\\foton\\\\client\\\\pages\\\\item\\\\_id.vue",
+    "chunkName": "pages/item/_id",
+    "_name": "_79288050"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "E:\\\\scs\\\\foton2\\\\foton\\\\client\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_b52145ca"
+  }
+]

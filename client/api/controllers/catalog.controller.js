@@ -1,7 +1,6 @@
 const CatalogService = require("../services/catalog.service")
 const catalogDTO = require("../dtos/catalog")
 const uploadFile = require("../libs/upload")
-const fs = require("fs")
 const textToImage = require("text-to-image")
 
 class CatalogController {
@@ -75,6 +74,9 @@ class CatalogController {
     async deleteItem(req, res, next){
         try {
             const data = await CatalogService.deleteItem(req.body.id)
+            const promise = await CatalogService.getImage(req.body.id)
+            const image = promise[0]['name']
+            const data2 = await CatalogService.rmImage(image)
             res.json(data)
         } catch (e) {
             next(e)
@@ -88,6 +90,8 @@ class CatalogController {
 
                 if (req.file == undefined) {
                   let newFile = req.body.title + ".png"
+                  const data = await CatalogService.editImage(req.body.id, newFile)
+
                   const dataUri = await textToImage.generate(req.body.title, {
                     debug: true,
                     debugFilename: `static/catalog_img/${newFile}`,
@@ -103,7 +107,6 @@ class CatalogController {
                     verticalAlign: 'center'
                   })
                   const result = await CatalogService.editItem(req.body.id, req.body.title, req.body.desc)
-                  const data = await CatalogService.editImage(req.body.id, newFile)
                   res.json(data)
                   return
                 }
@@ -132,7 +135,7 @@ class CatalogController {
       } catch (e) {
           next(e)
       }
-  }
+    }
 
 }
 
